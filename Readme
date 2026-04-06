@@ -1,0 +1,84 @@
+🖐️ Hand Detection using Traditional Computer Vision
+📌 Overview
+
+This project implements a real-time hand detection system using traditional computer vision techniques without relying on deep learning models. The system detects and tracks hand regions using skin color segmentation, contour detection, and convex hull algorithms.
+
+It is lightweight, efficient, and suitable for low-resource systems like laptops and embedded devices.
+
+🎯 Features
+Real-time hand detection using webcam
+Skin color segmentation in HSV color space
+Noise reduction using Gaussian Blur and Morphological Operations
+Contour detection for identifying hand shape
+Convex Hull for outlining hand structure
+Works without any machine learning or pretrained models
+🛠️ Technologies Used
+Python
+OpenCV
+NumPy
+📂 Project Structure
+Hand-Detection/
+│── hand_detection.py
+│── README.md
+⚙️ Installation
+1. Clone the repository
+git clone https://github.com/your-username/hand-detection-cv.git
+cd hand-detection-cv
+2. Install dependencies
+pip install opencv-python numpy
+▶️ Usage
+
+Run the script:
+
+python hand_detection.py
+Controls:
+Press ESC to exit the application
+🧠 How It Works
+1. Region of Interest (ROI)
+
+A fixed region is selected from the webcam feed where the hand is expected.
+
+2. Skin Color Segmentation
+
+The image is converted from BGR to HSV color space, and a mask is created to detect skin-colored pixels.
+
+3. Preprocessing
+Gaussian Blur removes noise
+Dilation and erosion improve mask quality
+4. Contour Detection
+
+The largest contour is assumed to be the hand.
+
+5. Convex Hull
+
+A convex hull is drawn around the detected hand to highlight its structure.
+
+📸 Output
+Live webcam feed with detected hand contour
+Binary mask showing segmented hand region
+🚀 Future Improvements
+Finger counting
+Gesture recognition (like 👍 ✌️)
+Mouse control using hand gestures
+Background subtraction for better accuracy
+Integration with robotics systems (e.g., rover control)
+⚠️ Limitations
+Sensitive to lighting conditions
+Skin color detection may vary across users
+Works best with simple backgrounds
+💡 Why Traditional Computer Vision?
+No need for large datasets
+Lightweight and fast
+Works on low-end hardware
+Easy to understand and implement
+🤝 Contributing
+
+Feel free to fork this repository and improve the project!
+
+📜 License
+
+This project is open-source and available under the MIT License.
+
+👨‍💻 Author
+
+Padala Monish Reddy
